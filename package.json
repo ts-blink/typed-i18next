@@ -1,5 +1,5 @@
 {
-    "name": "typed-i18next",
+    "name": "blink-typedi18next",
     "version": "0.1.0",
     "description": "Type-safe translations generator for i18next.",
     "main": "dist/index.js",
