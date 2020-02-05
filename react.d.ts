@@ -6,7 +6,7 @@ export interface StrictTypedTranslations<
     TTranslations extends { keys: { [key: string]: any }; keysWithNS: { [key: string]: any } }
 > {
     (ns?: undefined, ...args: IgnoreFirstParameter<TTranslationsFun>): Omit<ReturnType<TTranslationsFun>, "t"> & {
-        t: (key: ExtractObject<TTranslations["keysWithNS"]> | ExtractObject<TTranslations["keys"]>, interpolate?: Object) => string;
+        t: (key: ExtractObject<TTranslations["keys"]>, interpolate?: Object) => string;
     };
     <TNamespace extends keyof TTranslations["keys"]>(ns: TNamespace, ...args: IgnoreFirstParameter<TTranslationsFun>): Omit<
         ReturnType<TTranslationsFun>,
